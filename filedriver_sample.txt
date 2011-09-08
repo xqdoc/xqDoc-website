@@ -1,0 +1,57 @@
+// representative 'predefined' function namespace prefixes and uris 
+private static final String A_PREFIX = "AAA";
+private static final String A_URI = "http://someuri.com/a";
+private static final String B_PREFIX = "BBB";
+private static final String B_URI = "http://someuri.com/b";
+
+// default namespace uri
+private static final String XPATH_URI = "http://www.w3.org/2003/05/xpath-functions";
+
+
+try {
+
+	// create the controller with the correct XQuery working draft spec
+	XQDocController controller = new XQDocController(XQDocController.MAY2003);
+				
+	HashMap uriMap = new HashMap();
+	uriMap.put(A_PREFIX, A_URI);
+	uriMap.put(B_PREFIX, B_URI);
+
+	// set the predefined function namespaces
+	controller.setPredefinedFunctionNamespaces(uriMap);
+
+	// set the default function namespace
+	controller.setDefaultFunctionNamespace(XPATH_URI);
+
+	// set the module base (preprended to main module uris)
+	controller.setModuleBase("http://localhost");
+
+	// process the list of modules 
+	for (int i = 0; i < files.length; i++) {
+
+		FileInputStream fstream = new FileInputStream(files[i]);
+		File theFile = new File(files[i]);
+
+		// process the module
+		XQDocPayload payload = controller.process(fstream, theFile.getName());
+		
+		/* invoke the following methods on the payload to get the xqDoc XML
+		 * and the xqDoc URI fro the processed module	
+                 *				
+		 *   payload.getXQDocXML();
+		 *   payload.getModuleURI();
+		 * 
+		 * then use this information to insert the xqDoc XML into the database
+		 * with collection 'xqdoc' and the xqDoc URI
+                 */         
+
+		System.out.println("Inserted --> '" + payload.getModuleURI() + "'");
+
+	}
+				
+
+} catch (Exception ex) {
+
+	ex.printStackTrace();
+
+}
