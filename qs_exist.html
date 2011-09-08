@@ -1,0 +1,334 @@
+<html>
+<head>
+<title>xqDoc Project -- Quick Start [eXist]</title>
+</head>
+<body bgcolor="#FFFFFF" alink="#666666" vlink="#666666">
+
+<!-- Output the Header -->
+<table width="650" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<a href="index.html"><img src="logo.gif" border="0"/></a>
+<br/>
+<img src="line_1pixel_horizontal.gif" width="650" height="1"/>
+</td>
+</tr>
+</table>
+
+<p/>
+
+<table width="650" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td bgcolor="#DEDFE2" width="143" valign="top">
+&nbsp;<br/>
+<font face="Arial" size="+1"color="#4F5982">Project</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="history.html" style="text-decoration:none">History</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="mission.html" style="text-decoration:none">Mission</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="quotes.html" style="text-decoration:none">Quotes</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="license.html" style="text-decoration:none">License</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="news.html" style="text-decoration:none">News</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1" color="#4F5982">Related Efforts</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xquery-style.html" style="text-decoration:none">XQuery Style</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Quick Start</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_general.html" style="text-decoration:none">General</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_exist.html" style="text-decoration:none">eXist</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_marklogic.html" style="text-decoration:none">MarkLogic</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_saxon.html" style="text-decoration:none">Saxon</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_zorba.html" style="text-decoration:none">Zorba</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Documentation</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="assumptions_doc.html" style="text-decoration:none">Assumptions</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="limitations_doc.html" style="text-decoration:none">Limitations</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_comments_doc.html" style="text-decoration:none">xqDoc Comments</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_schema_doc.html" style="text-decoration:none">xqDoc Schema</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_conversion_doc.html" style="text-decoration:none">xqDoc Conversion</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_display_doc.html" style="text-decoration:none">xqDoc Display</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_drivers_doc.html" style="text-decoration:none">xqDoc Drivers</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Downloads</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="binaries.html" style="text-decoration:none">Binaries</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="source.html" style="text-decoration:none">Source</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Sample Output</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="basic.html" style="text-decoration:none">xqDoc Basic</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="standard.html" style="text-decoration:none">xqDoc Standard</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="enhanced.html" style="text-decoration:none">xqDoc Enhanced</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Credits</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="who_we_are.html" style="text-decoration:none">Who We Are</a></font>
+<br/>
+</td>
+
+<!-- Spacer -->
+<td width="5"/>
+
+<!-- Vertical Line-->
+<td width="2"  bgcolor="#4F5982"/>
+
+<td width="500" valign="top">
+<table width="500" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<img src="line_1pixel_horizontal.gif" width="350" height="1"/>
+</td>
+<td align="middle" width="150">
+<font face="Arial" color="#4F5982" size="+1"><i>eXist</i></font>
+</td>
+</tr>
+</table>
+<p/>
+<table width="500" border="0" cellspacing="5" cellpadding="5">
+<tr>
+<td>
+<center>
+<font face="Arial" color="#666666" size="-1">
+The eXist quick start guide is courtesy of Wolfgang Meier
+</font>
+</center>
+<p/>
+<font face="Arial" color="#666666">
+This quick start guide provides instructions for using xqDoc with
+the eXist Open Source XML database <a href="http://exist-db.org">http://exist-db.org</a>.
+Future versions of eXist will use xqDoc to document eXist's own library modules,
+so xqDoc will probably be included in the main distribution of eXist.
+In the meantime, the following describes how to set up eXist for xqDoc.
+<p/>
+You should download the most recent stable build of eXist from SourceForge. 
+<p/>
+</font>
+<font face="Arial" color="#666666" size="-1">
+<a href="http://sourceforge.net/project/showfiles.php?group_id=17691&package_id=13430">eXist at SourceForge</a>
+<p/>
+<br/>
+<b>Setting up the classpath</b>
+<p/>
+To run the xqDoc drivers, you need the following jar files in your CLASSPATH.
+<p/>
+From eXist:
+</font>
+<p/>
+<ul>
+<font face="Arial" color="#666666" size="-1">
+<li>exist.jar</li>
+<li>lib/core/xmldb.jar</li>
+<li>lib/core/xmlrpc-1.2-patched.jar</li>
+<li>lib/core/antlr.jar</li>
+</font>
+</ul>
+<p/>
+<font face="Arial" color="#666666">
+From xqDoc:
+</font>
+<p/>
+<ul>
+<font face="Arial" color="#666666" size="-1">
+<li>xqdoc_conv.jar available <a href="downloads/xqdoc-conversion-bin-v1_6.zip">here</a></li>
+</font>
+</ul>
+<p/>
+<font face="Arial" color="#666666">
+Plus the eXist driver jar for xqDoc:
+</font>
+<p/>
+<ul>
+<font face="Arial" color="#666666" size="-1">
+<li>xqdoc_eXist.jar available <a href="downloads/xqdoc-eXist-driver-bin-v1_0.zip">here</a></li>
+</font>
+</ul>
+<p/>
+<br/>
+<font face="Arial" color="#666666">
+<b>EXistFileDriver</b>
+<p/>
+This driver parses a set of XQuery files from the file system and stores the generated
+xqDoc XML into the database collection /db/xqdoc on an eXist server. The 
+invocation should look as follows:
+</font>
+<p/>
+<font face="Arial" color="#666666" size="-1">
+java org.xqdoc.drivers.exist.EXistFileDriver dirOrFile [serverURI] [user] [password]
+</font>
+<p/>
+<font face="Arial" color="#666666">
+<ul>
+<li>dirOrFile: is either a directory or a single XQuery file.</li>
+<li>serverURI: (optional) the XML:DB URI of the root database collection. By default
+this is xmldb:exist://localhost:8080/exist/xmlrpc/db, which corresponds to a default
+eXist setup.</li>
+<li>user: (optional) the user name to use for the connection.</li>
+<li>password: (optional) the password.</li>
+</ul>
+<p/>
+So, assuming that ...
+<p/>
+<ul>
+<li>your XQuery files are in /home/test/xquery</li>
+<li>your eXist server is running on host myserver.com</li> 
+</ul>
+<p/>
+the correct command line would be ...
+<p/>
+<table width="300" border="0" cellspacing="1" cellpadding="1">
+<tr>
+<td>java</td>
+<td>org.xqdoc.drivers.exist.EXistFileDriver</td>
+</tr>
+<tr>
+<td/>
+<td>/home/test/xquery</td>
+</tr>
+<tr>
+<td/>
+<td>xmldb:exist://myserver.com:8080/exist/xmlrpc/db</td>
+</tr>
+<tr>
+<td/>
+<td>guest</td>
+</tr>
+<tr>
+<td/>
+<td>guest</td>
+</tr>
+</table>
+<p/>
+<br/>
+<b>EXistStoredModuleDriver</b>
+<p/>
+Use this version of the driver if your XQuery sources are stored in a database 
+collection, not in the file system. The first parameter is the collection to
+scan for XQuery modules. All other parameters are like above.
+<p/>
+So assuming that you want to parse the XQuery modules stored in the database
+collection /db/modules, you would use ...
+<p/>
+<table width="300" border="0" cellspacing="1" cellpadding="1">
+<tr>
+<td>java</td>
+<td>org.xqdoc.drivers.exist.EXistStoredModuleDriver</td>
+</tr>
+<tr>
+<td/>
+<td>/db/modules</td>
+</tr>
+<tr>
+<td/>
+<td>xmldb:exist://myserver.com:8080/exist/xmlrpc/db</td>
+</tr>
+<tr>
+<td/>
+<td>guest</td>
+</tr>
+<tr>
+<td/>
+<td>guest</td>
+</tr>
+</table>
+<p/>
+<br/>
+<b>EXistZipDriver</b>
+<p/>
+This driver, similar to the MarkLogicZipDriver, will create an off-line viewing mode for the xqDoc XML.  
+This driver is currently under development and will be available soon.
+<p/>
+<br/>
+<b>Display</b>
+<p/>
+We will run the xqDoc scripts through the XQueryServlet. It is
+also possible to install them as stored XQuery modules directly on the database
+server. Once you have installed eXist, start the server as described in the documentation.
+<p/>
+Create a new directory "xqdoc" below the webapp directory in the eXist installation
+directory. Copy the XQuery file 
+</font>
+<p/>
+<ul>
+<font face="Arial" color="#666666" size="-1">
+<li>xqdoc-display.xqy</li>
+</font>
+</ul>
+<font face="Arial" color="#666666">
+<p/>
+from the <a href="downloads/xqdoc-jan2007-scripts-v1_3.zip">xqdoc-jan2007-scripts-v1_3.zip</a> package into the xqdoc directory.
+<p/>
+Next, copy
+</font>
+<p/>
+<ul>
+<font face="Arial" color="#666666" size="-1">
+<li>default.xqy</li>
+<li>get-code.xqy</li>
+<li>get-module.xqy</li>
+</font>
+</ul>
+<p/>
+<font face="Arial" color="#666666">
+shipped with the eXist <a href="downloads/xqdoc-eXist-driver-src-v1_0.zip">driver</a> to the same location. Those files contain
+some vendor-specific function calls that have to be adopted for eXist.
+<p/>
+With the xqDoc XML stored in the database, it can now be viewed with the xqDoc 
+presentation scripts. If the xqDoc scripts were installed as described above, you
+can view the xqDoc module home page at:
+</font>
+<p/>
+<font face="Arial" color="#666666" size="-1">
+http://localhost:8080/exist/xqdoc/default.xqy
+</font>
+<font face="Arial" color="#666666">
+<p/>
+<br/>
+<b>Installation Verification</b>
+<p/>
+If user-defined XQuery library and main modules are not readily available, the xqDoc display scripts
+can be used to verify the proper configuration of the eXist environment and usage of the eXist
+provided drivers.  To use these scripts, reference the eXist webapps/xqdoc directory (as the directory
+for the .xqy files to process) when executing the EXistFileDriver.  When the xqDoc presentation output is
+viewed ... 
+<p/>
+<font face="Arial" color="#666666" size="-1">
+http://localhost:8080/exist/xqdoc/default.xqy
+</font>
+<p/>
+<font face="Arial" color="#666666">
+it should look very similar to the <a href="enhanced/default.html">enhanced</a> output.  The main 
+difference will be the W3C XPath Functions and Operators will not be hypertext linked.
+<p/>
+</font>
+</td>
+</tr>
+</table>
+
+</body>
+
+</html>

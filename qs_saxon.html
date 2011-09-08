@@ -1,0 +1,237 @@
+<html>
+<head>
+<title>xqDoc Project -- Quick Start [Saxon]</title>
+</head>
+<body bgcolor="#FFFFFF" alink="#666666" vlink="#666666">
+
+<!-- Output the Header -->
+<table width="650" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<a href="index.html"><img src="logo.gif" border="0"/></a>
+<br/>
+<img src="line_1pixel_horizontal.gif" width="650" height="1"/>
+</td>
+</tr>
+</table>
+
+<p/>
+
+<table width="650" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td bgcolor="#DEDFE2" width="143" valign="top">
+&nbsp;<br/>
+<font face="Arial" size="+1"color="#4F5982">Project</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="history.html" style="text-decoration:none">History</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="mission.html" style="text-decoration:none">Mission</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="quotes.html" style="text-decoration:none">Quotes</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="license.html" style="text-decoration:none">License</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="news.html" style="text-decoration:none">News</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1" color="#4F5982">Related Efforts</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xquery-style.html" style="text-decoration:none">XQuery Style</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Quick Start</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_general.html" style="text-decoration:none">General</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_exist.html" style="text-decoration:none">eXist</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_marklogic.html" style="text-decoration:none">MarkLogic</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_saxon.html" style="text-decoration:none">Saxon</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_zorba.html" style="text-decoration:none">Zorba</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Documentation</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="assumptions_doc.html" style="text-decoration:none">Assumptions</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="limitations_doc.html" style="text-decoration:none">Limitations</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_comments_doc.html" style="text-decoration:none">xqDoc Comments</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_schema_doc.html" style="text-decoration:none">xqDoc Schema</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_conversion_doc.html" style="text-decoration:none">xqDoc Conversion</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_display_doc.html" style="text-decoration:none">xqDoc Display</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_drivers_doc.html" style="text-decoration:none">xqDoc Drivers</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Downloads</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="binaries.html" style="text-decoration:none">Binaries</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="source.html" style="text-decoration:none">Source</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Sample Output</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="basic.html" style="text-decoration:none">xqDoc Basic</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="standard.html" style="text-decoration:none">xqDoc Standard</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="enhanced.html" style="text-decoration:none">xqDoc Enhanced</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Credits</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="who_we_are.html" style="text-decoration:none">Who We Are</a></font>
+<br/>
+</td>
+
+<!-- Spacer -->
+<td width="5"/>
+
+<!-- Vertical Line-->
+<td width="2"  bgcolor="#4F5982"/>
+
+<td width="500" valign="top">
+<table width="500" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<img src="line_1pixel_horizontal.gif" width="350" height="1"/>
+</td>
+<td align="middle" width="150">
+<font face="Arial" color="#4F5982" size="+1"><i>Saxon</i></font>
+</td>
+</tr>
+</table>
+<p/>
+<table width="500" border="0" cellspacing="5" cellpadding="5">
+<tr>
+<td>
+<p/>
+<font face="Arial" color="#666666">
+This quick start guide provides instructions for using xqDoc with
+the Saxon Open Source XQuery processor <a href="http://saxon.sourceforge.net/">http://saxon.sourceforge.net/</a>.
+The following instructions are based on Saxon-B version 8.9.  However, none of the instructions are specific to
+this version so they should apply to subsequent (and likely earlier versions) as well.
+<p/>
+<br/>
+<b>Setting up the classpath</b>
+<p/>
+To run the xqDoc driver, you need the following jar files in your CLASSPATH.
+<p/>
+From Saxon:
+</font>
+<p/>
+<ul>
+<font face="Arial" color="#666666" size="-1">
+<li><a href="http://prdownloads.sourceforge.net/saxon/saxonb8-9j.zip">saxonb-8.9.jar</a></li>
+</font>
+</ul>
+<p/>
+<font face="Arial" color="#666666">
+From ANTLR:
+</font>
+<p/>
+<ul>
+<font face="Arial" color="#666666" size="-1">
+<li><a href="http://www.antlr.org/download/antlr-2.7.5.jar">antlr-2.7.5.jar</a></li>
+</font>
+</ul>
+<p/>
+<font face="Arial" color="#666666">
+From xqDoc:
+</font>
+<p/>
+<ul>
+<font face="Arial" color="#666666" size="-1">
+<li>xqdoc_conv.jar available <a href="downloads/xqdoc-conversion-bin-v1_6.zip">here</a></li>
+<li>xqdoc_saxon.jar available <a href="downloads/xqdoc-saxon-driver-bin-v1_1.zip">here</a></li>
+</font>
+</ul>
+<p/>
+<br/>
+<font face="Arial" color="#666666">
+<b>XQDocLiteDriver</b>
+<p/>
+This driver parses a set of XQuery files from the file system,  stores the generated
+xqDoc XML into the filesystem, transforms the xqDoc XML to XHTML, and then removes the
+intermediate xqDoc XML files from the filesystem. The invocation should look as follows:
+</font>
+<p/>
+<font face="Arial" color="#666666" size="-1">
+java org.xqdoc.lite.XQDocLite [file | dir] [file-extension] [xquery-version] [default-function-namespace] [predefined-namespace-mappings] [output-directory] [xqdoc-display]
+</font>
+<p/>
+<font face="Arial" color="#666666">
+<ul>
+<li>file: individual XQuery library module to process.</li>
+<li>dir: directory containing library modules to process.</li>
+<li>file-extension: XQuery file extension (i.e. xq, xqy, etc.).</li>
+<li>xquery-version: XQuery specification version (MAY2003, NOV2003, OCT2004, APR2005, SEP2005, NOV2005, JAN2007).  If an invalid version is specified, the driver defaults to JAN2007.</li>
+<li>default-function-namespace: A URI value or 'default' to use the XPATH F&amp;O.</li>
+<li>predefined-namespace-mappings: semi-colon separated list of prefix=uri mappings or 'none'.</li>
+<li>output-directory: directory for outputting the xqDoc xml and xhtml files.</li>
+<li>xqdoc-display: Location of the XQuery module to render the output (optional).  If not specified, will use the default version specified in the xqdoc_conv.jar.</li>
+</ul>
+<p/>
+So, assuming that ...
+<p/>
+<ul>
+<li>the XQuery files are in /home/test/xquery</li>
+<li>the file extension is '.xq'</li> 
+<li>the XQuery files adhere to the Jan 2007 W3C XQuery specification</li>
+<li>the resultant XHTML should be stored in /home/test/xquery/xqdoc
+</ul>
+<p/>
+the correct command line would be ...
+<p/>
+<table width="300" border="0" cellspacing="1" cellpadding="1">
+<tr>
+<td>java</td>
+<td>org.xqdoc.lite.XQDocLite</td>
+</tr>
+<tr>
+<td/>
+<td>/home/test/xquery</td>
+</tr>
+<tr>
+<td/>
+<td>.xq</td>
+</tr>
+<tr>
+<td/>
+<td>JAN2007</td>
+</tr>
+<tr>
+<td/>
+<td>default</td>
+</tr>
+<tr>
+<td/>
+<td>none</td>
+</tr>
+<tr>
+<td/>
+<td>/home/test/xquery/xqdoc</td>
+</tr>
+</table>
+<p/>
+<br/>
+<b>Installation Verification</b>
+<p/>
+If user-defined XQuery library and main modules are not readily available, one of the XQuery samples distributed with Saxon
+can be used to verify the proper configuration of the Saxon environment and usage of the Lite
+driver provided for Saxon.  To test the configuration, reference the Saxon samples/query directory (as the directory
+for the xquery files to process) when executing the XQDocLiteDriver.  Then view the generated xqDoc presentation output. 
+</td>
+</tr>
+</table>
+
+</body>
+
+</html>

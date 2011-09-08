@@ -1,0 +1,409 @@
+<html>
+<head>
+<title>xqDoc Project -- Quick Start [MarkLogic]</title>
+</head>
+<body bgcolor="#FFFFFF" alink="#666666" vlink="#666666">
+
+<!-- Output the Header -->
+<table width="650" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<a href="index.html"><img src="logo.gif" border="0"/></a>
+<br/>
+<img src="line_1pixel_horizontal.gif" width="650" height="1"/>
+</td>
+</tr>
+</table>
+
+<p/>
+
+<table width="650" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td bgcolor="#DEDFE2" width="143" valign="top">
+&nbsp;<br/>
+<font face="Arial" size="+1"color="#4F5982">Project</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="history.html" style="text-decoration:none">History</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="mission.html" style="text-decoration:none">Mission</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="quotes.html" style="text-decoration:none">Quotes</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="license.html" style="text-decoration:none">License</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="news.html" style="text-decoration:none">News</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1" color="#4F5982">Related Efforts</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xquery-style.html" style="text-decoration:none">XQuery Style</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Quick Start</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_general.html" style="text-decoration:none">General</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_exist.html" style="text-decoration:none">eXist</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_marklogic.html" style="text-decoration:none">MarkLogic</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_saxon.html" style="text-decoration:none">Saxon</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_zorba.html" style="text-decoration:none">Zorba</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Documentation</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="assumptions_doc.html" style="text-decoration:none">Assumptions</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="limitations_doc.html" style="text-decoration:none">Limitations</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_comments_doc.html" style="text-decoration:none">xqDoc Comments</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_schema_doc.html" style="text-decoration:none">xqDoc Schema</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_conversion_doc.html" style="text-decoration:none">xqDoc Conversion</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_display_doc.html" style="text-decoration:none">xqDoc Display</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_drivers_doc.html" style="text-decoration:none">xqDoc Drivers</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Downloads</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="binaries.html" style="text-decoration:none">Binaries</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="source.html" style="text-decoration:none">Source</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Sample Output</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="basic.html" style="text-decoration:none">xqDoc Basic</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="standard.html" style="text-decoration:none">xqDoc Standard</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="enhanced.html" style="text-decoration:none">xqDoc Enhanced</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Credits</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="who_we_are.html" style="text-decoration:none">Who We Are</a></font>
+<br/>
+</td>
+
+
+<!-- Spacer -->
+<td width="5"/>
+
+<!-- Vertical Line-->
+<td width="2"  bgcolor="#4F5982"/>
+
+<td width="500" valign="top">
+<table width="500" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<img src="line_1pixel_horizontal.gif" width="350" height="1"/>
+</td>
+<td align="middle" width="150">
+<font face="Arial" color="#4F5982" size="+1"><i>MarkLogic</i></font>
+</td>
+</tr>
+</table>
+<p/>
+<table width="500" border="0" cellspacing="5" cellpadding="5">
+<tr>
+<td>
+<font face="Arial" color="#666666">
+The following instructions are based on MarkLogic XML Content Server
+v3.0.  However, none of the instructions are specific to this version
+so it should work for the prior 2.* versions as well as subsequent version 3.*
+(assuming the proper versions for MarkLogic XDBC .jar files are installed).  In
+the future, we plan to provide a version that will work with the XCC .jar files.  But,
+in the interim, the XDBC approach should work for all versions of MarkLogic.
+<p/>
+<br/>
+<b>Setup</b>
+<p/>
+Although the following setup instructions do not have to be explicitly followed,
+they offer a 'clean' approach for configuring a MarkLogic environment for xqDoc.
+<ol>
+<li>Create a Forest (named 'xqdoc') for storing xqDoc XML.</li>
+<li>Create a Database (named 'xqdoc') for the xqDoc XML and reference the 'xqdoc' Forest previously 
+created.</li>
+<li>Create an XDBC server and reference the 'xqdoc' Database previously created.
+Set the 'library' for imports to 'xqdoc'.</li>
+<li>Create an HTTP server and reference the same 'xqdoc' Database previously created.
+Set the 'root' for the imports to 'xqdoc'.</li>
+<li>Immediately under the MarkLogic installation directory, create a directory named 'xqdoc'.</li>
+<li>Unzip the xqDoc May2003 <a href="source.html">presentation</a> scripts into this 'xqdoc' directory.</li>
+</ol>
+<p/>
+<br/>
+<b>Software Requirements</b>
+<p/>
+The following software packages need to be specified in the Java ClassPath.  The helpful
+links below provide the location(s) for these packages.
+<p/>
+<a href="downloads/xqdoc-conversion-bin-v1_6.zip">xqdoc-conversion-bin-v1_6.zip</a>
+<br/>
+<font size="-1">Use the xqdoc_conv.jar for the xqDoc conversion package contained in the zip file.</font>
+<p/>
+<a href="downloads/xqdoc-marklogic-driver-bin-v1_0.zip">xqdoc-marklogic-driver-bin-v1_0.zip</a> 
+<br/>
+<font size="-1">Use the xqdoc_ml.jar for the MarkLogic drivers contained in the zip file.</font>
+<p/>
+<a href="http://www.antlr.org/download/antlr-2.7.5.jar">antlr-2.7.5.jar</a>
+<br/>
+<font size="-1">Use the antlr-2.7.5.jar file.</font>
+<p/>
+<a href="http://www.jdom.org/dist/binary/jdom-1.0.zip">jdom-1.0.zip</a>
+<br/>
+<font size="-1">Use the jdom.jar contained in the zip file.</font>
+<p/>
+<a href="http://xqzone.marklogic.com/svn/xqrunner/releases/">xqrunner</a>
+<br/>
+<font size="-1">Select the appropriate version and use use the xqrunner.jar contained in the zip file.</font>
+<p/>
+<a href="http://xqzone.marklogic.com/svn/xdbc/releases/">MarkXDBC</a>
+<br/>
+<font size="-1">Select the appropriate version and use the xdbc.jar, xdmp.jar, and xeval.jar contained in the zip file.</font>
+<p/>
+With MarkLogic properly configured and the necessary .jar files downloaded, it is time to begin
+executing one of the MarkLogic drivers.
+<p/>
+<br/>
+<b>MarkLogicFileDriver</b>
+<p/>
+This driver will process XQuery library and main modules from the file system and store the
+resultant xqDoc XML into a MarkLogic database.  The driver expects the following parameters:
+<ul>
+<li>Either a directory containing library and main modules (ending in .xqy) or an individual module name</li> 
+<li>The Address of the MarkLogic XDBC server that will access and store the xqDoc XML</li>
+<li>The above MarkLogic XDBC server port number</li>
+<li>The above MarkLogic XDBC server username</li>
+<li>The above MarkLogic XDBC server password</li>
+</ul>
+<p/>
+So, assuming that ...
+<ul>
+<li>the necessary .jar files are specified in the ClassPath</li>
+<li>the library and main modules are available in e:\</li>
+<li>the MarkLogic XDBC server address is 24.15.60.100</li>
+<li>the XDBC port is 2000</li>
+<li>the username is 'darin'</li>
+<li>the password is 'xqdoc'</li>
+</ul>
+the invocation should look as follows ...
+<p/>
+<table width="300" border="0" cellspacing="1" cellpadding="1">
+<tr>
+<td>java</td>
+<td>org.xqdoc.drivers.marklogic.MarkLogicFileDriver</td>
+</tr>
+<tr>
+<td/>
+<td>e:\</td>
+</tr>
+<tr>
+<td/>
+<td>24.15.60.100</td>
+</tr>
+<tr>
+<td/>
+<td>2000</td>
+</tr>
+<tr>
+<td/>
+<td>darin</td>
+</tr>
+<tr>
+<td/>
+<td>xqdoc</td>
+</tr>
+</table>
+<p/>
+<br/>
+<b>MarkLogicModuleDriver</b>
+<p/>
+This driver will process XQuery library and main modules stored in a MarkLogic modules database
+and store the resultant xqDoc XML into a MarkLogic database.  The driver expects the following
+parameters:
+
+<ul>
+<li>Address of the MarkLogic XDBC server with access to the modules database</li> 
+<li>The above MarkLogic XDBC server port number</li>
+<li>The above MarkLogic XDBC server username</li>
+<li>The above MarkLogic XDBC server password</li>
+<li>The Address of the MarkLogic XDBC server that will access and store the xqDoc XML</li>
+<li>The above MarkLogic XDBC server port number</li>
+<li>The above MarkLogic XDBC server username</li>
+<li>The above MarkLogic XDBC server password</li>
+</ul>
+So, assuming that ...
+<ul>
+<li>the necessary .jar files are specified in the ClassPath</li>
+<li>the MarkLogic XDBC server address for the modules database is 24.15.60.100</li>
+<li>the XDBC port for this server is 4000</li>
+<li>the username  is 'darby'</li>
+<li>the password is 'modules'</li>
+<li>the MarkLogic XDBC server address for the xqDoc XML database is 24.15.60.100</li>
+<li>the XDBC port for this server is 2000</li>
+<li>the username  is 'darin'</li>
+<li>the password is 'xqdoc'</li>
+</ul>
+the invocation should look as follows ...
+<p/>
+<table width="300" border="0" cellspacing="1" cellpadding="1">
+<tr>
+<td>java</td>
+<td>org.xqdoc.drivers.marklogic.MarkLogicModuleDriver</td>
+</tr>
+<tr>
+<td/>
+<td>24.15.60.100</td>
+</tr>
+<tr>
+<td/>
+<td>4000</td>
+</tr>
+<tr>
+<td/>
+<td>darby</td>
+</tr>
+<tr>
+<td/>
+<td>modules</td>
+</tr>
+<tr>
+<td/>
+<td>24.15.60.100</td>
+</tr>
+<tr>
+<td/>
+<td>2000</td>
+</tr>
+<tr>
+<td/>
+<td>darin</td>
+</tr>
+<tr>
+<td/>
+<td>xqdoc</td>
+</tr>
+</table>
+<p/>
+<br/>
+<b>MarkLogicZipDriver</b>
+<p/>
+This driver will process all of the xqDoc XML files stored in the 'xqdoc' collection of the XML database and
+create a static view of the documentation by creating numerous HTML files and placing them
+into a zip file named xqdoc.zip.  This view of xqDoc XML is useful for those people who may
+not have access to the MarkLogic XML Content Server to dynamically render the content via scripts.
+Instead, an appointed person can create the .zip file and disseminate to the appropriate people.
+The driver expects the following parameters:
+
+<ul>
+<li>Directory where to place the generated xqdoc.zip file</li>
+<li>The Address of the MarkLogic XDBC server that will access the xqDoc XML</li>
+<li>The above MarkLogic XDBC server port number</li>
+<li>The above MarkLogic XDBC server username</li>
+<li>The above MarkLogic XDBC server password</li>
+</ul>
+<p/>
+So, assuming that ...
+<ul>
+<li>the necessary .jar files are specified in the ClassPath</li>
+<li>the xqDoc presentation scripts have installed in the root directory</li>
+<li>the MarkLogic XDBC server address is 24.15.60.100</li>
+<li>the XDBC port is 2000</li>
+<li>the username is 'darin'</li>
+<li>the password is 'xqdoc'</li>
+</ul>
+the invocation should look as follows ...
+<p/>
+<table width="300" border="0" cellspacing="1" cellpadding="1">
+<tr>
+<td>java</td>
+<td>org.xqdoc.drivers.marklogic.MarkLogicZipDriver</td>
+</tr>
+<tr>
+<td/>
+<td>24.15.60.100</td>
+</tr>
+<tr>
+<td/>
+<td>2000</td>
+</tr>
+<tr>
+<td/>
+<td>darin</td>
+</tr>
+<tr>
+<td/>
+<td>xqdoc</td>
+</tr>
+</table>
+<p/>
+<br/>
+<b>Display</b>
+<p/>
+With the xqDoc XML stored in the database, it can now be viewed with the xqDoc
+presentation scripts. 
+<p/>
+So, assuming that ...
+<ul>
+<li>the xqDoc presentation scripts have been unzipped in the MarkLogic HTTP server (with access to the xqDoc XML) root directory</li>
+<li>the xqDoc XML has been stored into the MarkLogic database with either the File driver or Module driver</li>
+<li>the address and port for the MarkLogic HTTP server (with access to the xqDoc XML) is 24.15.60.100 and 1000</li>
+</ul>
+The xqDoc module home page can be accessed with the following url:
+<p/>
+<table width="300" border="0" cellspacing="1" cellpadding="1">
+<tr>
+<td width="10">&nbsp;</td>
+<td>http://24.15.60.100:1000/default.xqy</td>
+</tr>
+</table>
+<p/>
+<br/>
+<b>Installation Verification</b>
+<p/>
+If user-defined XQuery library and main modules are not readily available, the xqDoc display scripts
+can be used to verify the proper configuration of the MarkLogic environment and usage of the MarkLogic
+provided drivers.  Simply unzip the xqDoc display <a href="downloads/xqdoc-may2003-scripts-v1_3_1.zip">scripts</a> into a directory and then
+specify that directory when executing the MarkLogicFileDriver.  When the xqDoc presentation output is
+viewed, it should look very similar to the <a href="enhanced/default.html">enhanced</a> output.  The main 
+difference will be the W3C XPath Functions and Operators will not be hypertext linked.
+<p/>
+<br/>
+<b>Additional Scripts</b>
+<p/>
+The following scripts are helpful to enable cross-reference linking to functions defined in the W3C XPath Functions and Operators specification.
+As mentioned in the script comments, the XHTML documentation for the W3C XPath Functions and Operators specification  must first
+be loaded into the MarkLogic database.  Before loading the XHTML into the MarkLogic database, remove the "http://www.w3.org/1999/xhtml" 
+namespace associated with the html element. These XQuery scripts will then translate the XHTML into xqDoc XML and load
+the generated xqDoc XML into the database.
+<p/>
+W3C XPath Functions and Operators specifications translation scripts:<p/> 
+&nbsp;&nbsp;&nbsp;<a href="ml_xpathfo-may2003.txt">May 2003 script</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="ml_xpathfo-nov2003.txt">Nov 2003 script</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="ml_xpathfo-oct2004.txt">Oct 2004 script</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="ml_xpathfo-apr2005.txt">Apr 2005 script</a>,<br/>
+&nbsp;&nbsp;&nbsp;<a href="ml_xpathfo-sep2005.txt">Sep 2005 script</a><br/> 
+&nbsp;&nbsp;&nbsp;<a href="ml_xpathfo-nov2005.txt">Nov 2005 script</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="ml_xpathfo-jan2007.txt">Jan 2007 script</a><br/>
+</font>
+<p/>
+<font face="Arial" color="#666666" size="-1">
+There are certainly more recent drafts available for the W3C XPath Functions and Operators specification to use for the translation scripts, but we
+are using the May 2003 version since the XML database we are leveraging supports the May 2003 specification.  It
+would be a simple exercise to create a similar translation script for more recent versions of the
+XPath Functions and Operators specification.
+</font>
+</td>
+</tr>
+</table>
+
+</body>
+
+</html>
