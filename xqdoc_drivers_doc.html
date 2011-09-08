@@ -1,0 +1,214 @@
+<html>
+<head>
+<title>xqDoc Documentation -- Drivers</title>
+</head>
+<body bgcolor="#FFFFFF" alink="#666666" vlink="#666666">
+
+<!-- Output the Header -->
+<table width="650" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<a href="index.html"><img src="logo.gif" border="0"/></a>
+<br/>
+<img src="line_1pixel_horizontal.gif" width="650" height="1"/>
+</td>
+</tr>
+</table>
+
+<p/>
+
+<table width="650" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td bgcolor="#DEDFE2" width="143" valign="top">
+&nbsp;<br/>
+<font face="Arial" size="+1"color="#4F5982">Project</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="history.html" style="text-decoration:none">History</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="mission.html" style="text-decoration:none">Mission</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="quotes.html" style="text-decoration:none">Quotes</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="license.html" style="text-decoration:none">License</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="news.html" style="text-decoration:none">News</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1" color="#4F5982">Related Efforts</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xquery-style.html" style="text-decoration:none">XQuery Style</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Quick Start</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_general.html" style="text-decoration:none">General</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_exist.html" style="text-decoration:none">eXist</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_marklogic.html" style="text-decoration:none">MarkLogic</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_saxon.html" style="text-decoration:none">Saxon</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_zorba.html" style="text-decoration:none">Zorba</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Documentation</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="assumptions_doc.html" style="text-decoration:none">Assumptions</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="limitations_doc.html" style="text-decoration:none">Limitations</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_comments_doc.html" style="text-decoration:none">xqDoc Comments</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_schema_doc.html" style="text-decoration:none">xqDoc Schema</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_conversion_doc.html" style="text-decoration:none">xqDoc Conversion</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_display_doc.html" style="text-decoration:none">xqDoc Display</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_drivers_doc.html" style="text-decoration:none">xqDoc Drivers</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Downloads</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="binaries.html" style="text-decoration:none">Binaries</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="source.html" style="text-decoration:none">Source</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Sample Output</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="basic.html" style="text-decoration:none">xqDoc Basic</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="standard.html" style="text-decoration:none">xqDoc Standard</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="enhanced.html" style="text-decoration:none">xqDoc Enhanced</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Credits</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="who_we_are.html" style="text-decoration:none">Who We Are</a></font>
+<br/>
+</td>
+
+
+<!-- Spacer -->
+<td width="5"/>
+
+<!-- Vertical Line-->
+<td width="2"  bgcolor="#4F5982"/>
+
+<td width="500" valign="top">
+<table width="500" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<img src="line_1pixel_horizontal.gif" width="350" height="1"/>
+</td>
+<td align="middle" width="150">
+<font face="Arial" color="#4F5982" size="+1"><i>xqDoc Drivers</i></font>
+</td>
+</tr>
+</table>
+<p/>
+<table width="500" border="0" cellspacing="5" cellpadding="5">
+<tr>
+<td>
+<font face="Arial" color="#666666">
+This section briefly describes driver functionality suggestions for xqDoc independent of any
+vendor's specific XQuery implementation.  For information on xqDoc drivers for a vendor specific
+implementation, visit the <a href="qs_general.html">QuickStart</a> guide.  
+<p/>
+The following set of xqDoc drivers define the core functionality that is desirable for any vendor's XQuery implementation
+that fronts an underlying XML database. The first two drivers are for creating and storing xqDoc XML into a XML database.  
+The third driver is for accessing xqDoc XML stored in the XML database and creating an off-line xqDoc 
+static XHTML presentation view.
+<p/>
+<b>FileDriver</b>
+<p/>
+This driver processes XQuery library and main modules stored in a file system.  The generated
+xqDoc XML for each module is then  stored in the 'xqdoc' collection for the XML database.  This
+driver will invoke vendor neutral methods defined in the <a href="xqdoc_conversion_doc.html">XQDoc Conversion</a> package to parse 
+the modules and retrieve the generated xqDoc XML.  In particular, the driver will only interact
+with the XQDocController class [view the XQDocController <a target="javadoc" href="javadoc/controller/org/xqdoc/conversion/XQDocController.html">javadoc</a>] contained in the xqDoc Conversion package.  Vendor specific methods will need to be provided to 
+properly insert the generated xqDoc XML into the vendor's XML database.
+<p/>
+<a href="filedriver_sample.txt">Here</a> is a vendor neutral FileDriver code snippet that provides a representative example for
+interacting with XQDocController.  By using this code sample as a template, it should take little
+effort to develop a xqDoc FileDriver for a particular vendor's XML database.
+<p/>
+<b>ModuleDriver</b>
+<p/>
+This driver will process XQuery library and main modules stored in a vendors XML database as opposed to the file system.
+The generated xqDoc XML for each module is then stored in the 'xqdoc' collection for the XML
+database.  This driver will invoke vendor neutral methods defined in the <a href="xqdoc_conversion_doc.html">xqDoc Conversion</a>
+package to parse the modules and retrieve the generated xqDoc XML.  In particular, the driver will only interact
+with the XQDocController class [view the XQDocController <a target="javadoc" href="javadoc/controller/org/xqdoc/conversion/XQDocController.html">javadoc</a>] contained in the xqDoc Conversion package. Vendor specific methods will need to be
+provided to retrieve the modules to be parsed from the vendor's database and insert the generated
+xqDoc XML into the vendor's XML database.
+<p/>
+<b>ZipDriver</b>
+<p/>
+This driver will process all of the xqDoc XML files stored in the 'xqdoc' collection and
+create a static view of the documentation by creating numerous XHTML files and placing them
+into a zip file named xqdoc.zip.  This view of xqDoc XML is useful for those people who may
+not have real-time access to the XML database for dynamically rendering the content via scripts.
+Instead, an appointed person can create the .zip file and disseminate the files to the appropriate people.
+Since the xqDoc XML is already stored in the XML database, this driver will not need to invoke
+any methods defined in the xqDoc Conversion package.  But, vendor specific methods may need to be provided to
+properly execute XQuery functions contained in <a target="sample" href="enhanced/xqdoc-file-5.html">xqdoc/xqdoc-display</a>.
+In particular, the following functions will be directly executed by the driver.
+<ul>
+<li>get-module-uris()</li>
+<br/>
+<font size="-1">Get the list of xqDoc module URIs stored in the xqdoc collection.</font>
+<p/>
+<li>get-default-html(true())</li>
+<br/>
+<font size="-1">Get the xqDoc home page.  The parameter of 'true()' indicates
+that links should be built for 'off-line' viewing.</font>
+<p/>
+<li>get-module-html(uri, true())</li>
+<br/>
+<font size="-1">Get the module display page for the specified xqDoc module uri.  The parameter of
+'true()' indicates that links should be built for 'off-line' viewing.</font>
+<p/>
+<li>get-code-html(uri, (), true())</li>
+<br/>
+<font size="-1">Get the module source code for the specified xqDoc module uri.  The parameter of
+'true()' indicates that links should be built for 'off-line' viewing.</font>
+<p/>
+<li>get-function-names(uri)</li>
+<br/>
+<font size="-1">Get the list of functions defined within the specified xqDoc module uri.</font>
+<p/>
+<li>get-code-html(uri, functionName, true())</li>
+<br/>
+<font size="-1">Get the function source code for the specified xqDoc module uri and function name.
+ The parameter of 'true()' indicates that links should be built for 'off-line' viewing.</font>
+<p/>
+</ul>
+<p/>
+<br/>
+The following  xqDoc driver defines the core functionality that is desirable for XQuery processors that
+are not reliant upon an XML database.
+<p/>
+<b>LiteDriver</b>
+<p/>
+This driver processes XQuery library and main modules stored in a file system.  The generated
+xqDoc XML for each module is then  stored in the filesystem.  This driver will invoke vendor neutral 
+methods defined in the <a href="xqdoc_conversion_doc.html">XQDoc Conversion</a> package to parse 
+the modules and retrieve the generated xqDoc XML.  In particular, the driver will only interact
+with the XQDocController class [view the XQDocController 
+<a target="javadoc" href="javadoc/controller/org/xqdoc/conversion/XQDocController.html">javadoc</a>] 
+contained in the xqDoc Conversion package.  Vendor specific methods will need to be provided to 
+properly transform the xqDoc XML stored in the filesystem to XHTML.  Overall, this driver is very
+similar to the FileDriver; the main exception is the LiteDriver does not leverage a XML database.
+<p/>
+</font>
+</td>
+</tr>
+</table>
+
+</body>
+
+</html>

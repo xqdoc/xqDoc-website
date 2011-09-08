@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>xqDoc Documentation -- Schema</title>
+</head>
+<body bgcolor="#FFFFFF" alink="#666666" vlink="#666666">
+
+<!-- Output the Header -->
+<table width="650" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<a href="index.html"><img src="logo.gif" border="0"/></a>
+<br/>
+<img src="line_1pixel_horizontal.gif" width="650" height="1"/>
+</td>
+</tr>
+</table>
+
+<p/>
+
+<table width="650" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td bgcolor="#DEDFE2" width="143" valign="top">
+&nbsp;<br/>
+<font face="Arial" size="+1"color="#4F5982">Project</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="history.html" style="text-decoration:none">History</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="mission.html" style="text-decoration:none">Mission</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="quotes.html" style="text-decoration:none">Quotes</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="license.html" style="text-decoration:none">License</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="news.html" style="text-decoration:none">News</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1" color="#4F5982">Related Efforts</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xquery-style.html" style="text-decoration:none">XQuery Style</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Quick Start</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_general.html" style="text-decoration:none">General</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_exist.html" style="text-decoration:none">eXist</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_marklogic.html" style="text-decoration:none">MarkLogic</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_saxon.html" style="text-decoration:none">Saxon</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_zorba.html" style="text-decoration:none">Zorba</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Documentation</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="assumptions_doc.html" style="text-decoration:none">Assumptions</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="limitations_doc.html" style="text-decoration:none">Limitations</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_comments_doc.html" style="text-decoration:none">xqDoc Comments</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_schema_doc.html" style="text-decoration:none">xqDoc Schema</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_conversion_doc.html" style="text-decoration:none">xqDoc Conversion</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_display_doc.html" style="text-decoration:none">xqDoc Display</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="xqdoc_drivers_doc.html" style="text-decoration:none">xqDoc Drivers</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Downloads</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="binaries.html" style="text-decoration:none">Binaries</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="source.html" style="text-decoration:none">Source</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Sample Output</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="basic.html" style="text-decoration:none">xqDoc Basic</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="standard.html" style="text-decoration:none">xqDoc Standard</a></font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="enhanced.html" style="text-decoration:none">xqDoc Enhanced</a></font>
+<br/>
+<p/>
+<font face="Arial" size="+1"color="#4F5982">Credits</font>
+<br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="who_we_are.html" style="text-decoration:none">Who We Are</a></font>
+<br/>
+</td>
+
+<!-- Spacer -->
+<td width="5"/>
+
+<!-- Vertical Line-->
+<td width="2"  bgcolor="#4F5982"/>
+
+<td width="500" valign="top">
+<table width="500" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<img src="line_1pixel_horizontal.gif" width="350" height="1"/>
+</td>
+<td align="middle" width="150">
+<font face="Arial" color="#4F5982" size="+1"><i>xqDoc Schema</i></font>
+</td>
+</tr>
+</table>
+<p/>
+<table width="500" border="0" cellspacing="5" cellpadding="5">
+<tr>
+<td>
+<font face="Arial" color="#666666">
+The xqDoc Schema was designed to store information about XQuery library and main modules in a vendor neutral format.  
+For XQuery library and main modules, XML adhering to this schema can be generated from the provided xqDoc conversion package.  
+For proprietary XQuery library modules offered by vendors (often written in a different language other than XQuery) the xqDoc Schema 
+is once again a neutral format for storing information about these library modules.  For example, 
+we have translated the W3C XPath F&O May 2003 working draft (from <a href="http://www.w3c.org/TR/2003/WD-xpath-functions-20030502/">XHTML</a>) into the neutral xqDoc XML format
+with this <a href="xpathfo.txt">script</a>.  By  normalizing documentation to a single neutral format (and storing the resultant XML in a XML database or filesystem) it then 
+becomes possible to use the provided xqDoc XQuery presentation functions to generate the resultant XHTML.
+<p/>
+    The xqDoc schema is divided into the five following sections.  The schema is well docmented and is available <a href="http://xqdoc.org/xqdoc-1.0.10292010.xsd">here</a>.
+<p/>
+<b>control</b>
+<p/>
+This section contains information about the xqDoc conversion package version (and date) when
+the xqDoc XML was generated.  For xqDoc XML created from proprietary sources (i.e. not from user-defined
+library or main modules) which did not use the xqDoc conversion program, then the version would likely contain 'N/A'.
+<p/>
+<b>module</b>
+<p/>
+This section defines the module xqDoc URI, the type of module ('library' or 'main') and xqDoc comments associated with the module.
+In addition, the entire source code associated with the module is stored.  The module xqDoc URI listed in this
+section is used extensively by the scripts for cross-reference linking.  The base-uri value for the document
+when stored into the XML database can be different from this value ... although, as a general rule these values will normally be the same.
+<p/>
+<b>imports</b>
+<p/>
+This section defines the imported modules and any xqDoc comments associated with the imports.
+<p/>
+<b>variables</b>
+<p/>
+This section defines the global variables and any xqDoc comments associated with the imports.
+<p/>
+<b>functions</b>
+<p/>
+This section defines each of the functions contained within the library or main module and any xqDoc comments 
+associated with the functions.  Any 'invoked' functions associated with this function should also
+be defined as well as referenced global variables.  For main modules, it will also include the QueryBody XQuery 
+expression under the default function name of 'xqDoc-main'.  In addition, the source code associated with each
+function is stored.
+<p/>
+</font>
+</td>
+</tr>
+</table>
+
+</body>
+
+</html>
