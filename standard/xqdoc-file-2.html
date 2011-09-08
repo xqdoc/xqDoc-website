@@ -1,0 +1,159 @@
+<html xml:space="preserve"><head><title>xqDoc -- Module</title><script language="JavaScript"><!--
+        function popUp(URL) {
+                 day = new Date();
+                 id = day.getTime();
+                 eval("page = window.open(URL, 'xqdoccode', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=600,height=400,left = 412,top = 334');")
+                 page.focus();
+        }
+      --></script><style><!--
+body		{
+		font: 80% Verdana;
+		}
+table		{
+		font-size: 100%;
+		}
+h1, h2, h3, h4, h5, h6
+		{
+		clear: both;
+		float: none;
+		}
+h1		{
+		font-size: 100%;
+		margin: 0em;
+		}
+h2		{
+		font-size: 180%;
+		margin-bottom: -1em;
+		margin-top: .3em;
+		}
+h3		{
+		font-size: 150%;
+		}	
+h4		{
+		font-size: 140%;
+		background-color: #ccf;
+		border-bottom: 1px solid #99f;
+		width: 100%;
+		}
+h5		{
+		margin: 1em 0em 0em 0em;
+		font-size: 120%;
+		}
+h6		{
+		margin: 0em 0em 0em 3em;
+		font-style: italic;
+		font: bold italic;
+		font-size: 100%;
+		}
+#variables, #methods, #methoddetail
+		{
+		padding-left: 3em;
+		margin-bottom: 1.4em;
+		clear: both;
+		float: none;
+		}
+#methods ul.method, #variables ul.method
+		{
+		margin: 1em 0em 0em;
+		}
+#methoddetail ul.method
+		{
+		margin: 0em;
+		}
+div.inexternal
+		{
+		padding-left: 2em;
+		margin-bottom: 1em;
+		}
+div.methoddetail p
+		{
+		float: none;
+		clear: both;
+		padding-left: 2em;
+		margin-bottom: 1em;
+		}
+div.methoddetail{
+		padding-bottom: 1em;
+		}
+div.methoddetail li
+		{
+		list-style-type: none;
+		font-weight: bold;
+		}
+div.methoddetail li li
+		{
+		list-style-type: circle;
+		font-weight: normal;
+		}
+div.methoddetail li ul
+		{
+		padding-bottom: 0.5em;
+		font-weight: normal;
+		}
+table.inexternal{
+		clear: both;
+		float: none;
+		width: 80%;
+		margin-left: 3em;
+		padding: 0em;
+		
+		}
+table.inexternal th
+		{
+		background-color:#dedede;
+		width: 50%;
+		}			
+td		{
+		vertical-align: top;
+		}
+div.description {
+		margin-top: .5em;
+		font-weight: normal;
+		padding-left: 1em;
+		}
+ul.method	{
+		clear: both;
+		float: none;
+		width: 90%;
+		list-style-type: none;
+		border-top: 1px solid #ccc;
+		}
+ul.method li.left
+		{
+		float: left;
+		clear: none;
+		width: 40%;
+		font-weight: bold;
+		margin-bottom: 2em;
+		}
+ul.method li.right
+		{
+		position: relative;
+            top: 0em;
+		float: left;
+            width: 55%;
+		margin-bottom: 2em;
+		padding-left: 2em;
+		}
+div.home 	{
+		width: 60%;
+		float: left;
+		margin-right: 1%;
+		border: 1px
+		}
+div.home h4	{
+		font-size: 120%;
+		background-color: #fff;
+		border-bottom: 1px solid #99f;
+		width: 100%;
+		margin-bottom: -1em;
+		}
+div.overview p {
+               width: 60%;
+               }
+     
+ --></style></head><body><a href="default.html"><h1>xqDoc Home</h1></a><h4>Module URI</h4><h1>get-code.xqy</h1><a href="javascript:popUp('xqdoc-file-2_source.html')">
+          view code
+        </a><h4>Module Description</h4><p>   This main module controls the presentation of the code for either  an entire mdoule or a particlur function within a module.   The mainline function invokes only the  method to retrieve the source code.  The 'module' and 'function' parameters  are extracted from the query-string.  If only a 'module' is specified, then  the source code for the entire module will be returned.  If both a 'module'  and a 'function' are specified, only the source code for the specified function  within the module will be returned. A parameter of type xs:boolean   is passed to indicate whether links on the page should be constructed   to static HTML pages (for off-line viewing) or to XQuery scripts for dynamic  real-time viewing. </p><ul><li><strong>Author:&#160;</strong> Darin McBeath</li><li><strong>Version:&#160;</strong> 1.1 </li><li><strong>Since:&#160;</strong> February 27, 2005</li></ul>&#160;<h4>Imported Modules</h4><div id="imports"><div><ul class="method"><li class="left"><a href="xqdoc-file-4.html">xqdoc/xqdoc-display</a></li><li class="right"/></ul><ul/></div></div>&#160;<h4>Function Summary</h4><div id="methods"><a name="methods"/><ul class="method"><li class="left"><a href="#xqDoc-main">xqDoc-main</a><div class="description"/></li><li class="right"/></ul></div>&#160;<h4>Function Detail</h4><div id="methoddetail"><div id="xqDoc-main" class="methoddetail"><h5><a name="xqDoc-main"/>xqDoc-main</h5><ul class="method"><li class="left"><a href="javascript:popUp('xqdoc-file-2-xqDoc-main.html')">
+          view code
+        </a></li><li class="right"/></ul><ul/><div class="methoddetail"><h6>External Functions that are used by this Function</h6><table class="inexternal"><tr><th align="left">Module URI</th><th align="left">Function Name</th></tr><tr><td>&#160;</td><td>&#160;</td></tr><tr><td rowspan="3">http://marklogic.com/xdmp</td><td>add-response-header</td></tr><tr><td>get-request-field</td></tr><tr><td>set-response-content-type</td></tr><tr><td>&#160;</td><td>&#160;</td></tr><tr><td rowspan="1">xqdoc/xqdoc-display</td><td><a href="xqdoc-file-4.html#get-code-html">get-code-html</a></td></tr></table></div></div>&#160;</div>&#160;<div align="left"><i>Created by xqDoc version 1.0 on Tue Oct 04 15:02:15 EDT 2005</i></div></body></html>
