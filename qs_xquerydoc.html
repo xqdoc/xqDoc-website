@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>xqDoc Documentation -- Limitations</title>
+<title>xqDoc Project -- Quick Start [xquerydoc]</title>
 </head>
 <body bgcolor="#FFFFFF" alink="#666666" vlink="#666666">
 
@@ -106,7 +106,7 @@
 <img src="line_1pixel_horizontal.gif" width="350" height="1"/>
 </td>
 <td align="middle" width="150">
-<font face="Arial" color="#4F5982" size="+1"><i>Limitations</i></font>
+<font face="Arial" color="#4F5982" size="+1"><i>xquerydoc</i></font>
 </td>
 </tr>
 </table>
@@ -114,59 +114,15 @@
 <table width="500" border="0" cellspacing="5" cellpadding="5">
 <tr>
 <td>
+<p/>
 <font face="Arial" color="#666666">
-This section details the known limitations of the current xqDoc conversion package.
-The following list highlights these limitations to minimize any problems that could
-be encountered when utilizing the xqDoc tools.    
-<ul>
-<li>
-There should be no function declared with the name of 'xqDoc-main' in a main module.  This is because xqDoc uses 'xqDoc-main' to 
-represent a pseudo function for the XQuery body which can exist within a main module outside of the prolog.  The
-name choice of 'xqDoc-main' was arbitrary and we are open to suggestions.
-</li>
+The open source xquerydoc project, implemented in pure XQuery v1.0,  parses xqDoc comments from  XQuery modules and generates a set of API level documentation (based on xqDoc XML).
+<p/>    
+Since xquerydoc is implemented in pure XQuery v1.0, the provided xqdoc function and can be invoked from most XQuery processors (Saxon, MarkLogic, XQilla, eXist).  
+The generated xqDoc XML can then be transformed into XHTML using XSLT (and custom extensions provided by an XQuery processor) or simply XQuery.
 <p/>
-<li>
-Embedded XQuery comments within a function will not be visible when viewing the source code for a function.  However, 
-if the source code for the entire module is viewed, the embedded XQuery comments will be retained.
-</li>
+    The <a href="http://github.com/xquery/xquerydoc">xquerydoc</a> project is available on github.
 <p/>
-<li>
-    The xqDoc grammar (part of the xqDoc conversion package) attempts to follow the W3C Recommendation for XQuery 1.0.  In some cases, the grammar will actually
-support cases not permitted in the specification to allow for support of various XQuery implementations extensions.  
-</li>
-</ul>
-<p/>
-The following limitations apply when an underlying XML database is used to store the xqDoc XML.
-<p/>
-<ul>
-<li>
-Each XQuery library module must be identified by a unique URI value (defined in the library module declaration).  
-This URI value must be unique since it will be used to enable cross-reference links for the xqDoc XML associated with the library module. 
-This also implies that the XPath F&O URI should not be used for a user defined 
-library module URI.
-</li>
-<p/>
-<li>
-Each XQuery main module must be identified by a unique URI value (using the baseModule prefix and name passed to the xqDoc conversion package).  
-Once again, the URI value must be unique since it will be used to enable cross-reference links for the xqDoc XML associated with the main module.
-More details on base module prefix and name convention can be found in the <a href="xqdoc_conversion_doc.html">conversion</a> documentation.
-</li>
-</ul>
-<p/>
-The following limitations apply when a XQuery processor is used to store xqDoc XML in the filesystem.
-<p/>
-<ul>
-<li>
-Only intra document links will be hypertext linked  when displaying functions and variables that are
-used by a function.  The 'text' will be displayed for external references, it will simply not
-be hypertext linked.
-</li>
-<p/>
-<li>
-The @see xqDoc comment parameter can only be used to display text or reference external web sites.  It
-can not be used to link internally to other xqDoc modules (including functions and variables).
-</li>
-</ul>
 </font>
 </td>
 </tr>

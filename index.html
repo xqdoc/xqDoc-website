@@ -50,6 +50,8 @@
 <br/>
 <font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_saxon.html" style="text-decoration:none">Saxon</a></font>
 <br/>
+<font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_xquerydoc.html" style="text-decoration:none">xquerydoc</a></font>
+<br/>      
 <font face="Arial"  color="#666666">&nbsp;&nbsp;<a href="qs_zorba.html" style="text-decoration:none">Zorba</a></font>
 <br/>
 <p/>
@@ -132,9 +134,13 @@ information.  Read more about the <a href="mission.html">mission</a>.
 </td>
 <td width="425" valign="top" align="left">
 <font face="Arial" color="#666666">
-    Today (September 09, 2011), xqDoc has migrated to GitHub.  The hope is that
-    it will now be easier for the community to contribute to xqDoc and make
-    further enhancements.
+    Today (September 23, 2011), the xqDoc team learned about the open source xquerydoc project (implemented in pure XQuery v1.0) that  parses xqDoc comments from  XQuery modules and generates a set of API level documentation (based on xqDoc XML).
+    <p/>    
+    Since xquerydoc is implemented in pure XQuery v1.0, the provided xqdoc function and can be invoked from most XQuery processors (Saxon, MarkLogic, XQilla, eXist).  
+    The generated xqDoc XML can then be transformed into XHTML using XSLT (and custom extensions provided by an XQuery processor) or simply XQuery.  This is 
+    an exciting development since it should now be much easier to genrate xqDoc XML from existing XQuery modules.
+    <p/>
+    The <a href="http://github.com/xquery/xquerydoc">xquerydoc</a> project is available on github.</font>
 <p/>
 </font>
 </td>
