@@ -117,6 +117,41 @@
 <table width="475" border="0" cellspacing="5" cellpadding="5">
 <tr>
 <td>
+    <font face="Arial" size="+1" color="#4F5982">January 13, 2014</font>
+    <p/>
+    <font face="Arial" color="#666666">
+        Today, the xqDoc team enhanced the xqDoc schema based on suggestions from the XQuery community.  The following changes were incorporated:
+        <ul>
+            <li>We added an xqdoc:annotations element to each variable or function that uses annotations. Similar to Zorba's proposal, the xqdoc:annotation child nodes may have additional xqdoc:literal nodes with type attributes (xs:string, xs:integer, xs:decimal, xs:double) and values.</li>
+            <li>We added a xqdoc:namespaces element to the root element, which summarizes all prefixes and namespace URIs used or declared in the module.</li>
+            <li>Similar to xquerydoc (but contrary to the current official xqDoc schema), we added name and type elements to variables.</li>
+        </ul>
+        For a discussion of the changes read this <a href="https://github.com/xquery/xquerydoc/issues/24#issuecomment-31602662">note</a>.
+        We would like to thank Christian Gr&#252;n (BaseX) for proposing and driving these changes within the xQuery community.
+        <p/>
+        The updated schema is available <a href="http://xqdoc.org/xqdoc-1.0.01132014.xsd">here</a>.</font>
+    <p/>
+    <br/>      
+    <font face="Arial" size="+1" color="#4F5982">September 23, 2011</font>
+    <p/>
+    <font face="Arial" color="#666666">
+        Today, the xqDoc team learned about the open source xquerydoc project (implemented in pure XQuery v1.0) that  parses xqDoc comments from  XQuery modules and generates a set of API level documentation (based on xqDoc XML).
+        <p/>    
+        Since xquerydoc is implemented in pure XQuery v1.0, the provided xqdoc function and can be invoked from most XQuery processors (Saxon, MarkLogic, XQilla, eXist).  
+        The generated xqDoc XML can then be transformed into XHTML using XSLT (and custom extensions provided by an XQuery processor) or simply XQuery.  This is 
+        an exciting development since it should now be much easier to genrate xqDoc XML from existing XQuery modules.   
+    <p/>
+    The <a href="http://github.com/xquery/xquerydoc">xquerydoc</a> project is available on github.</font>
+    <p/>
+    <br/>         
+    <font face="Arial" size="+1" color="#4F5982">September 09, 2011</font>
+    <p/>
+    <font face="Arial" color="#666666">
+        Today, xqDoc has migrated to GitHub.  The hope is that
+        it will now be easier for the community to contribute to xqDoc and make
+        further enhancements.</font>
+    <p/>
+    <br/>    
     <font face="Arial" size="+1" color="#4F5982">September 23, 2011</font>
     <p/>
     <font face="Arial" color="#666666">
